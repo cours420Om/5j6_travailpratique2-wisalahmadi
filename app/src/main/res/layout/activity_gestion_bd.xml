@@ -25,7 +25,25 @@
         android:layout_marginTop="108dp"
         android:text="Déconnexion"
         android:textSize="20sp"
+        android:onClick="logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titre" />
+
+    <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="671dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vous êtes bien connectés"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="189dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

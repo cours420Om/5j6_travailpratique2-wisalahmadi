@@ -5,15 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ActivityGestionBd extends AppCompatActivity {
 
+    Button btn_deconnexion, btn_settings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_bd);
+
+        btn_settings = findViewById(R.id.btn_setting);
+
+        btn_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ActivityGestionProfilDeconnexion.class));
+                finish();
+            }
+        });
+
     }
 
     public void logout(View view) {

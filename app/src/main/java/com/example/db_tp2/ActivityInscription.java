@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,48 +38,38 @@ public class ActivityInscription extends AppCompatActivity {
             public void onClick(View view) {
                 String email = et_email.getText().toString();
                 String pass = et_pass.getText().toString();
-              //  String valPass = et_valPass.getText().toString();
+                String valPass = et_valPass.getText().toString();
 
-
-                if(TextUtils.isEmpty(email)){
-                    et_email.setError("Veillez entrer votre courriel!");
-                }
-                if(TextUtils.isEmpty(pass) ){
-                    et_pass.setError("Veillez entrer votre mots de passe");
-                }if(pass.length()<5){
-                    et_pass.setError("Mots de pass doit contenir 8 lettres/chiffres");
-                } /*
-                if(TextUtils.isEmpty(valPass) ){
-                    et_valPass.setError("Veillez entrer votre mots de passe");
-                }
-
-                }if(valPass.length()<8){
-                    et_valPass.setError("Mots de pass doit contenir 8 lettres/chiffres");
-                }if(!valPass.equals(pass)){
-                    et_valPass.setError("Mots de pass non semblable");
-                }
-
-                     */
-
-                firebase.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        if(task.isSuccessful()){
-                            Toast.makeText(ActivityInscription.this,"user created", Toast.LENGTH_SHORT).show();
-                            Intent activityBD = new Intent(getApplicationContext(), ActivityGestionBd.class);
-                            startActivity(activityBD);
-                        }else {
-                            Toast.makeText(ActivityInscription.this,"Il semble avoir une erreur" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
+                if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    if (pass.matches(valPass) && pass.length() >= 6) {
+                        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                        firebase.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(ActivityInscription.this, "user created", Toast.LENGTH_SHORT).show();
+                                    Intent activityBD = new Intent(getApplicationContext(), ActivityGestionBd.class);
+                                    startActivity(activityBD);
+                                } else {
+                                    Toast.makeText(ActivityInscription.this, "Il semble avoir une erreur" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    } else if (pass.length() < 6) {
+                        et_pass.setError("Mots de pass doit contenir 6 caractères et plus!");
+                        et_pass.requestFocus();
+                    } else {
+                        et_valPass.setError("Mots de pass non semblable");
+                        et_valPass.requestFocus();
                     }
-                });
+                } else {
+                    et_email.setError("Veillez entrer un courriel valide");
+                    et_email.requestFocus();
+                }
+
             }
         });
-
-        if(firebase.getCurrentUser() != null){
-            Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(mainActivity);
-        }
     }
+
 }

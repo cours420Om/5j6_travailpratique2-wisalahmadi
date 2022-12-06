@@ -16,9 +16,9 @@
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteY="146dp" />
 
     <EditText
         android:id="@+id/et_password2"

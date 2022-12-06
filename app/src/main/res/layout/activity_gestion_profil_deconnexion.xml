@@ -8,7 +8,7 @@
     tools:context=".ActivityGestionProfilDeconnexion">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/et_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -22,7 +22,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/et_editEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -55,7 +55,7 @@
         android:text="Email:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <ImageView
         android:id="@+id/iv_photo"
