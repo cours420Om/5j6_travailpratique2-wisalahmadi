@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "460011560678",
+    "project_id": "db-tp2",
+    "storage_bucket": "db-tp2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460011560678:android:bb33ff97bbdb5393fe6527",
+        "android_client_info": {
+          "package_name": "com.example.db_tp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460011560678-bnuc11ro9s0c5ss3s7idq4mj7aah0n6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE35qHPGO_rJ6O6oa7LpcvEA5RNJBV66Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460011560678-bnuc11ro9s0c5ss3s7idq4mj7aah0n6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
