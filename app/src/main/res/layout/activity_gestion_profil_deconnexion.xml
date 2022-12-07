@@ -9,62 +9,63 @@
 
     <EditText
         android:id="@+id/et_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="397dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/pink"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Full name"
+        android:textColor="@color/pink"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nom"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titre2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/et_editEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:id="@+id/et_courriel"
+        android:layout_width="399dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/pink"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:text="Email"
+        android:textColor="@color/pink"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_courriel"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/tv_nom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="80dp"
-        android:text="Full name :"
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="412dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="144dp"
+        android:backgroundTint="@color/pink"
+        android:text="Update"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_photo" />
-
-    <TextView
-        android:id="@+id/tv_courriel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="48dp"
-        android:text="Email:"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_name" />
-
-    <ImageView
-        android:id="@+id/iv_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/et_courriel" />
+
+    <TextView
+        android:id="@+id/tv_titre2"
+        android:layout_width="397dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="Settings"
+        android:textColor="@color/pink"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

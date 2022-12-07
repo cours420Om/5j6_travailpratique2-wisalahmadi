@@ -13,37 +13,51 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:text="Bonjour et Bienvenue!"
+        android:textColor="@color/purple_200"
         android:textSize="34sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_deconnexion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_width="411dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="260dp"
+        android:backgroundTint="@color/purple_400"
+        android:onClick="logout"
         android:text="Déconnexion"
         android:textSize="20sp"
-        android:onClick="logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titre" />
 
     <Button
         android:id="@+id/btn_setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/purple_400"
         android:text="Settings"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="671dp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_deconnexion" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vous êtes bien connectés"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="189dp" />
+        android:textColor="@color/purple_200"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btn_deconnexion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titre"
+        app:layout_constraintVertical_bias="0.131" />
 </androidx.constraintlayout.widget.ConstraintLayout>
