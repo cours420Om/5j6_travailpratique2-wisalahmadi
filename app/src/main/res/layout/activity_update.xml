@@ -7,4 +7,83 @@
     android:background="@drawable/wallpaper"
     tools:context=".ActivityUpdate">
 
+    <EditText
+        android:id="@+id/et_country"
+        android:layout_width="409dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Country"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nomComplet3" />
+
+    <EditText
+        android:id="@+id/et_nomComplet3"
+        android:layout_width="411dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Full name"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_maj" />
+
+    <EditText
+        android:id="@+id/et_gender3"
+        android:layout_width="413dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Gender"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_birthDate3" />
+
+    <EditText
+        android:id="@+id/et_birthDate3"
+        android:layout_width="416dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Date of birth"
+        android:inputType="time"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_country" />
+
+    <TextView
+        android:id="@+id/tv_maj"
+        android:layout_width="281dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text="Mise à jour des données"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_oupdate2"
+        android:layout_width="415dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="68dp"
+        android:text="Mise à jour dans la bd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_gender3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

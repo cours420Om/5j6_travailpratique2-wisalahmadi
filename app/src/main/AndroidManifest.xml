@@ -18,22 +18,22 @@
         tools:targetApi="31">
         <activity
             android:name=".ActivityUpdate"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityAffichage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityAjouter"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityGestionProfilDeconnexion"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityGestionBd"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityInscription"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

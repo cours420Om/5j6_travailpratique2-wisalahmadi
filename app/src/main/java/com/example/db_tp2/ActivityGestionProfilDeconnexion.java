@@ -29,7 +29,7 @@ public class ActivityGestionProfilDeconnexion extends AppCompatActivity {
 
         binding = ActivityGestionProfilDeconnexionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+/*
         binding.btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +51,9 @@ public class ActivityGestionProfilDeconnexion extends AppCompatActivity {
                     });
                 }
             }
-        });
+
+
+        });*/
     }
     private void majDonnees(String nom, String courriel) {
 

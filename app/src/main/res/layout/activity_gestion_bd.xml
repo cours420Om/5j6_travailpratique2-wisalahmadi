@@ -62,10 +62,10 @@
         app:layout_constraintVertical_bias="0.131" />
 
     <Button
-        android:id="@+id/btn_ajouter"
+        android:id="@+id/btn_ouvrirAjouter"
         android:layout_width="412dp"
         android:layout_height="53dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="88dp"
         android:backgroundTint="@color/purple_400"
         android:text="Ajouter"
         android:textSize="20sp"
@@ -75,30 +75,16 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_setting" />
 
     <Button
-        android:id="@+id/btn_afficher"
+        android:id="@+id/btn_ouvrirAfficher"
         android:layout_width="413dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/purple_400"
         android:text="Afficher"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ajouter" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_ouvrirAjouter" />
 
-    <Button
-        android:id="@+id/btn_maj"
-        android:layout_width="418dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/purple_400"
-        android:text="Update"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_afficher"
-        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

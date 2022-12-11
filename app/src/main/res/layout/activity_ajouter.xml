@@ -24,17 +24,18 @@
 
     <EditText
         android:id="@+id/et_nomComplet"
-        android:layout_width="409dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="411dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Full name"
         android:inputType="textPersonName"
         android:text="Name"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_saveInfo" />
 
     <EditText
         android:id="@+id/et_gender"
@@ -69,9 +70,22 @@
         android:id="@+id/tv_saveInfo"
         android:layout_width="202dp"
         android:layout_height="33dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="44dp"
         android:text="Save informations"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sauvegarde"
+        android:layout_width="399dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:text="Button"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_gender" />
 </androidx.constraintlayout.widget.ConstraintLayout>

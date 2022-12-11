@@ -4,34 +4,48 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Utilisateur {
-    private String nom;
-    private String courriel;
 
-    public Utilisateur(String nom, String courriel) {
-        this.nom = nom;
-        this.courriel = courriel;
+    private String nomComplet;
+    private String pays;
+    private String dateNais;
+    private String gender;
 
+    public String getNomComplet() {
+        return nomComplet;
     }
 
-
-    public String getNom() {
-        return nom;
+    public void setNomComplet(String nomComplet) {
+        this.nomComplet = nomComplet;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public Utilisateur(String nomComplet, String pays, String dateNais, String gender) {
+        this.nomComplet = nomComplet;
+        this.pays = pays;
+        this.dateNais = dateNais;
+        this.gender = gender;
     }
 
-    public String getCourriel() {
-        return courriel;
+    public String getPays() {
+        return pays;
     }
 
-    public void setCourriel(String courriel) {
-        this.courriel = courriel;
+    public void setPays(String pays) {
+        this.pays = pays;
     }
 
-    @Override
-    public String toString(){
-        return nom + ", " + courriel ;
+    public String getDateNais() {
+        return dateNais;
+    }
+
+    public void setDateNais(String dateNais) {
+        this.dateNais = dateNais;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
