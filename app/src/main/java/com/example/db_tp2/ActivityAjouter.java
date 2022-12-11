@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ActivityAjouter extends AppCompatActivity {
 
-    ActivityAjouterBinding binding;
+    ActivityAjouterBinding binding1;
     String nomComplet, pays, dateNais, gender;
     FirebaseAuth bd;
     DatabaseReference ref;
@@ -26,16 +26,16 @@ public class ActivityAjouter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        // setContentView(R.layout.activity_ajouter);
 
-        binding = ActivityAjouterBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        binding1 = ActivityAjouterBinding.inflate(getLayoutInflater());
+        setContentView(binding1.getRoot());
 
-        binding.btnSauvegarde.setOnClickListener(new View.OnClickListener() {
+        binding1.btnSauvegarde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nomComplet = binding.etNomComplet.getText().toString();
-                pays = binding.etCountry.getText().toString();
-                dateNais = binding.etBirthDate.getText().toString();
-                gender = binding.etGender.getText().toString();
+                nomComplet = binding1.etNomComplet.getText().toString();
+                pays = binding1.etCountry.getText().toString();
+                dateNais = binding1.etBirthDate.getText().toString();
+                gender = binding1.etGender.getText().toString();
 
                 if(!nomComplet.isEmpty() && !pays.isEmpty()  && !dateNais.isEmpty()  && !gender.isEmpty()){
                     Utilisateur usager = new Utilisateur(nomComplet, pays, dateNais, gender);
@@ -45,11 +45,11 @@ public class ActivityAjouter extends AppCompatActivity {
                     ref.child(nomComplet).setValue(usager).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            binding.etNomComplet.setText("");
-                            binding.etCountry.setText("");
-                            binding.etBirthDate.setText("");
-                            binding.etGender.setText("");
-                            Toast.makeText(ActivityAjouter.this,"Update!", Toast.LENGTH_SHORT).show();
+                            binding1.etNomComplet.setText("");
+                            binding1.etCountry.setText("");
+                            binding1.etBirthDate.setText("");
+                            binding1.etGender.setText("");
+                            Toast.makeText(ActivityAjouter.this,"Ajouter!", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
