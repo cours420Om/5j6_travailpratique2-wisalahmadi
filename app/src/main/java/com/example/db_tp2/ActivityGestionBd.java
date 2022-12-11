@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ActivityGestionBd extends AppCompatActivity {
 
-    Button btn_settings, btn_ouvrirAjouter;
+    Button btn_settings, btn_ouvrirAjouter, btn_ouvrirAfficher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,7 @@ public class ActivityGestionBd extends AppCompatActivity {
 
         btn_settings = findViewById(R.id.btn_setting);
         btn_ouvrirAjouter = findViewById(R.id.btn_ouvrirAjouter);
+        btn_ouvrirAfficher = findViewById(R.id.btn_ouvrirAfficher);
 
         btn_settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,14 @@ public class ActivityGestionBd extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), ActivityAjouter.class));
+                finish();
+            }
+        });
+
+        btn_ouvrirAfficher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ActivityAffichage.class));
                 finish();
             }
         });
