@@ -24,13 +24,13 @@
         android:id="@+id/btn_deconnexion"
         android:layout_width="411dp"
         android:layout_height="48dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="136dp"
         android:backgroundTint="@color/purple_400"
         android:onClick="logout"
         android:text="Déconnexion"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titre" />
 
@@ -38,7 +38,7 @@
         android:id="@+id/btn_setting"
         android:layout_width="411dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/purple_400"
         android:text="Settings"
         android:textSize="20sp"
@@ -60,4 +60,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_titre"
         app:layout_constraintVertical_bias="0.131" />
+
+    <Button
+        android:id="@+id/btn_ajouter"
+        android:layout_width="412dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/purple_400"
+        android:text="Ajouter"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_setting" />
+
+    <Button
+        android:id="@+id/btn_afficher"
+        android:layout_width="413dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple_400"
+        android:text="Afficher"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ajouter" />
+
+    <Button
+        android:id="@+id/btn_maj"
+        android:layout_width="418dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_400"
+        android:text="Update"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_afficher"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
