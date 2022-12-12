@@ -2,4 +2,37 @@
     <string name="app_name">TP2-wisahm</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="et_email">Email</string>
+    <string name="et_password">Password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="tv_inscription">Don\'t have an account?</string>
+    <string name="btn_create">Create account</string>
+
+    <string name="tv_titre">Hello and welcome</string>
+    <string name="tv_titre1">You are connected</string>
+    <string name="btn_deconnexion">LOGOUT</string>
+    <string name="btn_setting">SETTINGS</string>
+    <string name="btn_ouvrirAjouter">ADD</string>
+    <string name="btn_ouvrirAfficher">DISPLAY</string>
+
+    <string name="tv_saveInfo">Save info</string>
+    <string name="et_nomComplet">Full name</string>
+    <string name="et_country">Country</string>
+    <string name="et_birthDate">Date of birth</string>
+    <string name="et_gender">Gender</string>
+    <string name="btn_sauvegarde">SAVE</string>
+
+    <string name="tv_maj">Display data</string>
+    <string name="et_chercher">Full name</string>
+    <string name="btn_rechercher">SEARCH</string>
+    <string name="btn_oupdate2">UPDATE</string>
+    <string name="btn_supprimer">DELETE</string>
+
+    <string name="tv_maj1">Update data</string>
+
+    <string name="et_name">Full name</string>
+    <string name="btn_update">UPDATE</string>
+    <string name="et_courriel">Email</string>
+
+
 </resources>
