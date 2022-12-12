@@ -2,6 +2,7 @@ package com.example.db_tp2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +23,9 @@ public class ActivityAffichage extends AppCompatActivity {
     FirebaseAuth bd;
     String nomComplet;
     DatabaseReference ref;
+    String pays, dateNais,gender;
+    FragmentAffichage frag1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,7 @@ public class ActivityAffichage extends AppCompatActivity {
     }
 
     private void lectureDonnees(String usager) {
+
         ref = FirebaseDatabase.getInstance().getReference("Utilisateurs");
         ref.child(usager).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -57,13 +62,22 @@ public class ActivityAffichage extends AppCompatActivity {
                     if (task.getResult().exists()) {
                         Toast.makeText(ActivityAffichage.this, "Lectures des données", Toast.LENGTH_SHORT).show();
                         DataSnapshot data = task.getResult();
-                        String pays = String.valueOf(data.child("pays").getValue());
-                        String dateNais = String.valueOf(data.child("dateNais").getValue());
-                        String gender = String.valueOf(data.child("gender").getValue());
+                        pays= String.valueOf(data.child("pays").getValue());
+                        dateNais = String.valueOf(data.child("dateNais").getValue());
+                        gender = String.valueOf(data.child("gender").getValue());
 
-                        binding.tvPays.setText("Pays: " + pays);
-                        binding.tvDateNais.setText("Date de naissance:" +dateNais);
-                        binding.tvGender.setText("Gender:" + gender);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("pays",pays);
+                        bundle.putString("date",dateNais );
+                        bundle.putString("gender",gender );
+
+                        frag1 = new FragmentAffichage();
+
+                        frag1.setArguments(bundle);
+
+                        FragmentManager fm = getSupportFragmentManager();
+                        fm.beginTransaction().replace(R.id.fl_fragment, frag1).commit();
+
                     } else {
                         Toast.makeText(ActivityAffichage.this, "L'utilisateur n'existe pas", Toast.LENGTH_SHORT).show();
                     }
