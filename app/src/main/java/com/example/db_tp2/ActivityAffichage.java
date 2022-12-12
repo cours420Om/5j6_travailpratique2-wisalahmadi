@@ -20,6 +20,7 @@ public class ActivityAffichage extends AppCompatActivity {
 
     ActivityAffichageBinding binding;
     FirebaseAuth bd;
+    String nomComplet;
     DatabaseReference ref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,21 @@ public class ActivityAffichage extends AppCompatActivity {
         binding = ActivityAffichageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         binding.btnOupdate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), ActivityUpdate.class));
                 finish();
+            }
+        });
+
+        binding.btnRechercher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nomComplet = binding.etChercher.getText().toString();
+
+                lectureDonnees(nomComplet);
             }
         });
     }
@@ -46,15 +57,13 @@ public class ActivityAffichage extends AppCompatActivity {
                     if (task.getResult().exists()) {
                         Toast.makeText(ActivityAffichage.this, "Lectures des données", Toast.LENGTH_SHORT).show();
                         DataSnapshot data = task.getResult();
-                        String nomComplet = String.valueOf(data.child("nomComplet").getValue());
                         String pays = String.valueOf(data.child("pays").getValue());
                         String dateNais = String.valueOf(data.child("dateNais").getValue());
                         String gender = String.valueOf(data.child("gender").getValue());
 
-                        binding.tvNomComplet.setText(nomComplet);
-                        binding.tvPays.setText(pays);
-                        binding.tvDateNais.setText(dateNais);
-                        binding.tvGender.setText(gender);
+                        binding.tvPays.setText("Pays: " + pays);
+                        binding.tvDateNais.setText("Date de naissance:" +dateNais);
+                        binding.tvGender.setText("Gender:" + gender);
                     } else {
                         Toast.makeText(ActivityAffichage.this, "L'utilisateur n'existe pas", Toast.LENGTH_SHORT).show();
                     }

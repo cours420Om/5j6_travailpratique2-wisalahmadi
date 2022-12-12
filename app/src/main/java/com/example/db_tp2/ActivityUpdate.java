@@ -44,7 +44,6 @@ public class ActivityUpdate extends AppCompatActivity {
         });
 
     }
-
     private void majDonnees(String nomComplet, String pays, String dateNais, String gender ) {
 
         HashMap usagers = new HashMap();
