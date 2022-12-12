@@ -50,6 +50,14 @@ public class ActivityAffichage extends AppCompatActivity {
                 lectureDonnees(nomComplet);
             }
         });
+
+        binding.btnSupprimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nomComplet = binding.etChercher.getText().toString();
+                effacerDonnees(nomComplet);
+            }
+        });
     }
 
     private void lectureDonnees(String usager) {
@@ -86,5 +94,23 @@ public class ActivityAffichage extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void effacerDonnees(String usager) {
+        ref = FirebaseDatabase.getInstance().getReference("Utilisateurs");
+
+        ref.child(usager).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(ActivityAffichage.this, "l'enrigistrement a été effacé", Toast.LENGTH_SHORT).show();
+
+                }
+                else {
+                    Toast.makeText(ActivityAffichage.this, "Erreur lors de la suppresion", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 }

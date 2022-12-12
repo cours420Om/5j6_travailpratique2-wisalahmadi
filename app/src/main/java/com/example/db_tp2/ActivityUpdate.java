@@ -37,7 +37,7 @@ public class ActivityUpdate extends AppCompatActivity {
                 nomComplet = binding.etNomComplet3.getText().toString();
                 pays = binding.etCountry.getText().toString();
                 dateNais = binding.etBirthDate3.getText().toString();
-                gender = binding.etGender3.getText().toString();
+                gender = binding.etGender.getText().toString();
 
                 majDonnees(nomComplet,pays,dateNais,gender);
             }
@@ -47,6 +47,7 @@ public class ActivityUpdate extends AppCompatActivity {
     private void majDonnees(String nomComplet, String pays, String dateNais, String gender ) {
 
         HashMap usagers = new HashMap();
+        usagers.put("nomComplet", nomComplet);
         usagers.put("pays",pays);
         usagers.put("dateNais",dateNais);
         usagers.put("gender ",gender);
@@ -61,7 +62,7 @@ public class ActivityUpdate extends AppCompatActivity {
                     binding.etNomComplet3.setText("");
                     binding.etCountry.setText("");
                     binding.etBirthDate3.setText("");
-                    binding.etGender3.setText("");
+                    binding.etGender.setText("");
                     Toast.makeText(ActivityUpdate.this,"Enrigistrement mise à jour",Toast.LENGTH_SHORT).show();
 
                 }else {

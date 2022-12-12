@@ -13,6 +13,7 @@
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:text="Lecture des données"
+        android:textColor="@color/Green"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
@@ -25,6 +26,7 @@
         android:layout_height="52dp"
         android:layout_marginBottom="32dp"
         android:text="Mise à jour"
+        android:backgroundTint="@color/Green"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +40,7 @@
         android:layout_width="405dp"
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
+        android:textColor="@color/Green"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -50,6 +53,7 @@
         android:layout_width="409dp"
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
+        android:backgroundTint="@color/Green"
         android:text="RECHERCHE"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,5 +69,16 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_rechercher">
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_supprimer"
+        android:layout_width="406dp"
+        android:layout_height="48dp"
+        android:text="Supprimer"
+        android:backgroundTint="@color/Green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_oupdate2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

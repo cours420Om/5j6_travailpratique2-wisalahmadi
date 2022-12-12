@@ -11,7 +11,7 @@
         android:id="@+id/et_name"
         android:layout_width="397dp"
         android:layout_height="48dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="92dp"
         android:backgroundTint="@color/pink"
         android:ems="10"
         android:inputType="textPersonName"
@@ -19,9 +19,8 @@
         android:textColor="@color/pink"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titre2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -45,27 +44,23 @@
         android:id="@+id/btn_update"
         android:layout_width="412dp"
         android:layout_height="48dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="120dp"
         android:backgroundTint="@color/pink"
         android:text="Update"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_courriel" />
 
-    <TextView
-        android:id="@+id/tv_titre2"
-        android:layout_width="397dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="68dp"
-        android:gravity="center"
-        android:text="Settings"
-        android:textColor="@color/pink"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
